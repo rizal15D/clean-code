@@ -7,7 +7,7 @@ class NewsService{
   String HostAPI = 'apidojo-yahoo-finance-v1.p.rapidapi.com';
 
   Future<Response> getNewsList() async{
-    Response res = await get(
+    Response res = await post(
       Uri.parse(ConstantAPI.newsList),
       headers: <String, String>{
         'X-RapidAPI-Key' : '$KeyAPI',

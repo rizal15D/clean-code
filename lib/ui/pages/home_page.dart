@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 import '../../controllers/home_controller.dart';
 import '../../utils/extension.dart';
+import '../../config/routes/route_name.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
             decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
             child: InkWell(
               onTap: () {
-                Get.to(DetailPage());
+                Get.toNamed(RouteName.detailPage, arguments: homeController.newsList[index]['id']);
               } ,
               child: Row(
                 children: [

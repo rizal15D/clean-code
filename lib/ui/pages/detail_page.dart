@@ -16,7 +16,10 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Obx(() => Text(detailController.title.value)),
       ),
-      body: Obx(() => Text(detailController.summary.value)),
+      body: Obx(() => Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(detailController.summary.value),
+      )),
     );
 
   }
